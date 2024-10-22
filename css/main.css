@@ -336,13 +336,13 @@ p {
 }
 
 .location-1 {
-    background-image: url(/images/location1.webp);
+    background-image: url(../images/location1.webp);
 }
 .location-2 {
-    background-image: url(/images/location2.webp);
+    background-image: url(../images/location2.webp);
 }
 .location-3 {
-    background-image: url(/images/location3.webp);
+    background-image: url(../images/location3.webp);
 }
 
 .location-card {
