@@ -371,50 +371,57 @@ p {
 
 .faq-container {
     display: flex;
-    flex-direction: column;
     gap: var(--lg);
     cursor: pointer;
     border-bottom: 1px solid var(--cloudGrey);
     margin-bottom: var(--lg);
+
+}
+
+.faq-container:hover .number h3,
+.faq-container:hover h2 {
+    color: var(--midnightAsh); /* Change this to your desired hover color */
+}
+
+
+.number {
+    display: flex;
 }
 
 .faq h1 {
     color: var(--midnightAsh);
 }
 
-.faq h2 {
-    /* border: solid red; */
-    margin-bottom: 0;
+.faq h3 {
     color: var(--cloudGrey);
     transition: all 0.2s linear;
+    font-weight: 400;
 }
-.faq h2:hover{
-    color: var(--midnightAsh);
+.faq h2 {
+    /* border: solid red; */
+    color: var(--cloudGrey);
+    transition: all 0.2s linear;
 }
 
 .answer p {
     margin-bottom: var(--lg);
+    color: var(--cloudGrey);
 }
 
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.2s ease-in-out;
 }
 
 .faq-container.active .answer {
     max-height: 300px;
-    transition: max-height 0.5s ease-in;
     color: var(--cloudGrey);
 }
-.faq-container.active h2 {
+.faq-container.active h2,
+.faq-container.active h3 {
     color: var(--midnightAsh);
 }
-
-.faq-container:not(.active) .answer {
-    transition: max-height 0.5s ease-out; /* FAQ closing: ease-out */ 
-}
-
 
 
 
