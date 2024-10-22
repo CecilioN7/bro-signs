@@ -372,7 +372,6 @@ p {
 .faq-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: var(--lg);
     cursor: pointer;
     border-bottom: 1px solid var(--cloudGrey);

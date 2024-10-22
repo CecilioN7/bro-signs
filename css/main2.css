@@ -1,1 +1,43 @@
-/* Reset body margins 
+/* Reset body margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Define the container to keep it centered */
+.container {
+    max-width: 1200px; /* Set a max width for the entire layout */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding to the sides */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 32px; /* Gutter between columns */
+}
+
+/* Example to have full-width sections if necessary */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Define your content to align properly */
+.main-content {
+    grid-column: span 12; /* Spanning all 12 columns */
+}
+
+/* Content for smaller sections */
+.column {
+    grid-column: span 6; /* Spanning 6 columns for example */
+}
+
+/* Make sure header, footer, and other sections fit the grid */
+header, footer {
+    grid-column: 1 / -1; /* Full width */
+}
+
+/* For responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr); /* Reduce columns on smaller screens */
+    }
+}
