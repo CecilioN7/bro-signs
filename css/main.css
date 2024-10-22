@@ -451,9 +451,12 @@ p {
     border-radius: var(--xxl);
     padding: var(--lg);
 }
-.button-1 h2 {
+.button-1 a {
     margin-bottom: 0;
     font-size: var(--font-size__200);
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
 }
 
 .call-to-action .picture {
