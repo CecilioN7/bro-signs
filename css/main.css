@@ -161,14 +161,14 @@ p {
 
 /* hook */
 .hook {
-    background-image: url(../images/glass.png);
+    /* background-image: url(../images/glass.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     padding: var(--sectionPadding);
     background-color: var(--midnightAsh);
-    
+
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
