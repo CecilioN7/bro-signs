@@ -161,21 +161,21 @@ p {
 
 /* hook */
 .hook {
-    background-image: url(/images/glass.png);
+    background-image: url(../images/glass.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     padding: var(--sectionPadding);
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+    background-color: var(--midnightAsh);
+    
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     gap: 1.5rem;
+    
+    position: relative;
+    overflow: hidden;
 }
 
 .glass-container {
@@ -189,6 +189,7 @@ p {
 
     padding: 3rem 2rem;
     max-width: 22rem;
+    z-index: 1;
 }
 
 .hook h2 {
@@ -208,6 +209,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .hook video {
