@@ -110,14 +110,13 @@ p {
 /* hero */
 .hero {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 90vh; /* Full screen height */
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
-    text-align: center;
-    overflow: hidden; /* Ensures image stays within bounds */
+    padding: var(--sectionPadding);
+    gap: var(--lg);
 }
 
 /* Hero Image */
@@ -136,6 +135,7 @@ p {
 .hero h1 {
     color: var(--desertStorm);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
 }
 
 /* services */
@@ -525,7 +525,7 @@ p {
     background-color: var(--oceanBreeze);
     color: var(--desertStorm);
     border-radius: var(--xxl);
-    padding: var(--lg);
+    padding: var(--md);
     text-decoration: none; /* Removes underline */
 }
 
@@ -549,7 +549,7 @@ p {
     background-color: transparent;
     color: var(--desertStorm);
     border-radius: var(--xxl);
-    padding: var(--lg);
+    padding: var(--md);
     text-decoration: none; /* Removes underline */
     border: 0.25rem solid var(--desertStorm);
 }
@@ -562,8 +562,9 @@ p {
 
 /* Optional: Add hover effect */
 .button-2:hover {
-    background-color: #4e8687; /* Define a hover variable or color */
+    background-color: var(--desertStorm); /* Define a hover variable or color */
     cursor: pointer;
+    color: var(--midnightAsh);
 }
 
 
