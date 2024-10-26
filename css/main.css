@@ -107,6 +107,7 @@ p {
     font-size: var(--font-size__100);
     font-weight: 600;
 }
+
 /* hero */
 .hero {
     position: relative;
@@ -115,8 +116,22 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: var(--sectionPadding);
     gap: var(--lg);
+}
+.hero .section{
+    display: grid;
+    gap: var(--xxl);
+}
+.hero-buttons {
+    display: grid;
+    gap: var(--md);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg);
+    padding: var(--mobilePadding);
 }
 
 /* Hero Image */
@@ -650,5 +665,69 @@ footer h1:hover {
 }
 
 @media (width >= 768px) {
-    /* Styles for tablets and above */
+    .container {
+        position: relative;
+        padding: 0 2rem;
+        max-width: 75rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .site-header {
+        background-color: #fdfdf792;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        backdrop-filter: blur(10px);
+    }
+    .navbar {
+        /* background-color: orange; */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--md);
+    }
+    .logo {
+        position: absolute;
+        left: 0;
+        top: 1.5rem;
+    }
+    .logo img {
+        max-height: 2rem;
+        width: auto;
+        /* background-color: green; */
+    }
+    .nav-menu {
+        display: flex;
+        gap: var(--lg);
+        list-style: none;
+    }
+    .nav-menu a {
+        text-decoration: none;
+        display: block;
+        /* background-color: yellow; */
+        padding: var(--sm) var(--md);
+        color: #333438;
+    }
+
+    .nav-menu a:hover {
+        color: #000000; /* Change color on hover */
+        font-weight: 500;
+    }
+
+    /* hero */
+    .hero .section{
+        display: grid;
+        max-width: 40rem;
+        gap: var(--md);
+    }
+    .hero h1 {
+        font-size: var(--font-size__600);
+    }
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--md);
+    }
 }
