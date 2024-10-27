@@ -302,23 +302,24 @@ p {
 /* benefits */
 
 .benefits {
-    display: grid;
+    /* display: grid;
     justify-content: center;
 
     padding: var(--mobilePadding);
-    gap: var(--xxl);
+    gap: var(--xxl); */
 }
 
-/* .service-card{
-    border: solid;
-} */
+.benefits .container {
+    display: grid;
+    padding: var(--mobilePadding);
+    gap: var(--xl);
+}
 
-.service-card img {
+.benefits img {
     width: 100%;
     height: 30svh;
     object-fit: cover;
     border-radius: 1.5rem;
-    margin-bottom: var(--md);
 }
 
 .benefits h2 {
@@ -820,13 +821,41 @@ footer h1:hover {
         flex-direction: column;
 
         padding: var(--xxl) var(--xxl);
-      }
-      
+    }
+
     .video-container {
         max-width: 18rem;
     }
+
     .hook video {
         object-fit: contain;
     }
 
+    /* benefits */
+    .benefits .service-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--xl);
+    }
+
+    .benefits .service-card-reversed {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--xl);
+        grid-template-areas: "text image";
+    }
+
+    .service-card-reversed .text {
+        grid-area: text;
+        /* Text in the first column */
+    }
+
+    .service-card-reversed picture {
+        grid-area: image;
+        /* Image in the second column */
+    }
+
+    .benefits img {
+        width: 1fr;
+    }
 }
