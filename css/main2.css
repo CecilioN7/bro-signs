@@ -44,13 +44,4 @@ header, footer {
 .box {
     width: 10rem;
     height: 10rem;
-    background-color: yellow;
-}
-
-
-/* For responsive design */
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(6, 1fr); /* Reduce columns on smaller screens */
-    }
-}
+   
