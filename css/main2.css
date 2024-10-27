@@ -35,9 +35,13 @@ header, footer {
     grid-column: 1 / -1; /* Full width */
 }
 
-/* For responsive design */
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(6, 1fr); /* Reduce columns on smaller screens */
-    }
+.container1 {
+    background-color: blue;
+    padding: 2rem;
+    display: inline-block; /* Wraps the container around the box */
 }
+
+.box {
+    width: 10rem;
+    height: 10rem;
+   
