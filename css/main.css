@@ -315,7 +315,7 @@ p {
 
 .service-card img {
     width: 100%;
-    height: 40vh;
+    height: 30svh;
     object-fit: cover;
     border-radius: 1.5rem;
     margin-bottom: var(--md);
@@ -772,11 +772,14 @@ footer h1:hover {
     .services .container {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .icon-box {
         height: 10rem;
         width: 10rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
     }
 
     .services .card {
@@ -815,6 +818,8 @@ footer h1:hover {
 
         display: flex;
         flex-direction: column;
+
+        padding: var(--xxl) var(--xxl);
       }
       
     .video-container {
