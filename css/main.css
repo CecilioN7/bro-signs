@@ -707,6 +707,10 @@ footer h1:hover {
         padding: var(--md) 0rem;
     }
 
+    .navbar .menu-icon {
+        display: hidden;
+    }
+
     .site-header {
         padding: var(--desktopPadding);
     }
