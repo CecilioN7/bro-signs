@@ -203,12 +203,16 @@ body {
 }
 
 input,
-textarea {
-    -webkit-tap-highlight-color: transparent; /* Removes the tap highlight */
+textarea,
+button { /* Removes the tap highlight */
     -webkit-appearance: none; /* Disables default styles on iOS */
     appearance: none; /* Disables default styles on other platforms */
 }
 
+input,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
 input:focus,
 textarea:focus,
 button:focus {
@@ -219,9 +223,20 @@ button:focus {
 
 .contact-form textarea {
     resize: vertical; /* Allows vertical resizing only */
-    height: 120px; /* Set a default height */
-  }
+    height: 15rem; /* Set a default height */
+}
 
+.submit-btn {
+    width: 100%;
+    padding: var(--md);
+    font-weight: bold;
+    font-size: var(--font-size__100);
+    background-color: var(--oceanBreeze);
+    border-radius: var(--lg);
+    color: var(--desertStorm);
+    border: none;
+    font-size: fo;
+}
 
 @media (width >=768px) {
     .container {
