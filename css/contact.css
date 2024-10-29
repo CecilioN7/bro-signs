@@ -196,9 +196,32 @@ body {
 .contact-form textarea:focus ~ label,
 .contact-form input:not(:placeholder-shown) ~ label,
 .contact-form textarea:not(:placeholder-shown) ~ label {
-    transform: translate(5px, -23px);
-    background-color: var(--desertStorm);
+    transform: translate(0px, -28px);
+    background-color: #fdfdf7;
+    padding: 1px 4px;
+    border-radius: var(--xs);
 }
+
+input,
+textarea {
+    -webkit-tap-highlight-color: transparent; /* Removes the tap highlight */
+    -webkit-appearance: none; /* Disables default styles on iOS */
+    appearance: none; /* Disables default styles on other platforms */
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none; /* Removes the focus outline */
+    box-shadow: none; /* Removes any shadow */
+    border-color: transparent; /* Optional: Removes the border color */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allows vertical resizing only */
+    height: 120px; /* Set a default height */
+  }
+
 
 @media (width >=768px) {
     .container {
