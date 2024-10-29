@@ -83,7 +83,7 @@ body {
     object-fit: cover;
 }
 
-.contact-information{
+.contact-information {
     display: flex;
     flex-direction: column;
     padding: var(--xl) var(--lg); /* mobile padding */
@@ -223,7 +223,7 @@ button:focus {
 
 .contact-form textarea {
     resize: vertical; /* Allows vertical resizing only */
-    height: 15rem; /* Set a default height */
+    height: 18rem; /* Set a default height */
 }
 
 .submit-btn {
@@ -239,6 +239,9 @@ button:focus {
 }
 
 @media (width >=768px) {
+    .contact {
+        padding: var(--xxxl) var(--xl);
+    }
     .container {
         position: relative;
         padding: 0 0rem;
@@ -247,4 +250,36 @@ button:focus {
         width: 100%;
     }
     
+    .contact .container {
+        display: flex;
+        flex-direction: row-reverse;
+        /* background-color: yellow; */
+        justify-content: space-between;
+    }
+    .contact .map {
+        height: 30rem;
+        max-width: 22rem;
+    }
+
+    .map img {
+        border-radius: var(--lg);
+    }
+
+    .contact-information {
+        padding: 0rem;
+    }
+    .contact h1 {
+        font-size: var(--font-size__600);
+    }
+
+    /* contact form */
+
+    .contact-form {
+        padding: var(--xxxl) var(--xl);
+    }
+
+    .contact-form .container {
+        border-radius: var(--md);
+        padding: var(--xl) var(--xl);
+    }
 }
