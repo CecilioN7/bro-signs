@@ -32,28 +32,42 @@ document.querySelectorAll('.faq-container').forEach(item => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const fixedImage = document.getElementById("fixedImage");
-    const fixedImage2 = document.getElementById("fixedImage2");
-    const hookSection = document.querySelector(".hook");
+// Email
+const contactForm = document.querySelector('.form-items');
 
-    // Create an IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                // When the .hook section goes out of view, hide the image
-                fixedImage.style.display = "none";
-                fixedImage2.style.display = "none";
-            } else {
-                // When the .hook section is in view, show the image
-                fixedImage.style.display = "block";
-                fixedImage2.style.display = "block";
-            }
-        });
-    }, {
-        threshold: 0.1 // Adjust threshold to determine how much of the section should be visible before triggering
-    });
+let name = document.getElementById('name')
+let email = document.getElementById('email')
+let address = document.getElementById('address')
+let message = document.getElementById('message')
 
-    // Observe the .hook section
-    observer.observe(hookSection);
-});
+contactForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    let formData = {
+        name: name.value,
+        email: email.value,
+        address: address.value,
+        message: message.value
+    }
+
+    // could use fetch API 3 lines
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '/');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        if (xhr.responseText == 'success'){
+            alert('Email sent');
+            name.value = '';
+            email.value = '';
+            address.value = '';
+            message.value = '';
+        } else {
+            alert('Something went wrong!')
+        }
+    }
+
+    //send method to the backend
+    xhr.send(JSON.stringify(formData))
+
+})
