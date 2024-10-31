@@ -53,24 +53,23 @@
     --xxxl: calc(var(--xxl) * var(--scaleFactor));
 
 }
-/* .site-header {
+.site-header {
     background-color: #fdfdf792;
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
     backdrop-filter: blur(10px);
-} */
+}
 .links-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
+
 nav {
     height: 4rem;
-    background-color: purple;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 .links-container {
@@ -79,6 +78,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 nav a {
     height: 100%;
@@ -89,11 +89,12 @@ nav a {
     color: var(--midnightAsh);
 }
 nav a:hover{
-    background-color: pink;
+    color: black;
 }
-nav .home-link {
+
+/* nav .home-link {
     margin-right: auto;
-}
+} */
 
 #sidebar-active {
     display: none;
@@ -104,16 +105,22 @@ nav .home-link {
 }
 
 @media (max-width: 768px) {
+    nav {
+        height: 3rem;
+        justify-content: flex-end;
+    }
     .links-container{
         flex-direction: column;
         align-items: flex-end;
+        justify-content: start;
 
         position: fixed;
         top: 0;
         right: -100%;
         z-index: 10;
         width: 75svw;
-        background-color: yellow;
+        height: 100vh;
+        background-color: var(--desertStorm);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.5s ease-out;
     }
@@ -121,8 +128,11 @@ nav .home-link {
         box-sizing: border-box;
         height: auto;
         width: 100%;
-        padding: var(--md), var(--lg);
+        padding: var(--lg);
         justify-content: flex-start;
+        color: var(--midnightAsh);
+        font-weight: 600;
+        font-size: var(--font-size__200);
     }
     .open-sidebar-button,
     .close-sidebar-button {
@@ -133,8 +143,8 @@ nav .home-link {
         right: 0;
     }
     #sidebar-active:checked ~ #overlay{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         position: fixed;
         top: 0;
         left: 0;
