@@ -120,7 +120,7 @@ nav a:hover{
         z-index: 10;
         width: 75svw;
         height: 100vh;
-        background-color: var(--desertStorm);
+        background-color: var(--midnightAsh);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.5s ease-out;
     }
