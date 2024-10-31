@@ -688,7 +688,11 @@ footer h1:hover {
         margin: 0 auto;
         width: 100%;
     }
-
+    .logo img {
+        max-height: 2rem;
+        width: auto;
+    }
+/* 
     .site-header {
         background-color: #fdfdf792;
         position: fixed;
@@ -699,7 +703,6 @@ footer h1:hover {
     }
 
     .navbar {
-        /* background-color: orange; */
         position: relative;
         display: flex;
         justify-content: center;
@@ -721,12 +724,6 @@ footer h1:hover {
         top: 1.5rem;
     }
 
-    .logo img {
-        max-height: 2rem;
-        width: auto;
-        /* background-color: green; */
-    }
-
     .nav-menu {
         display: flex;
         gap: var(--lg);
@@ -736,16 +733,14 @@ footer h1:hover {
     .nav-menu a {
         text-decoration: none;
         display: block;
-        /* background-color: yellow; */
         padding: var(--sm) var(--md);
         color: #333438;
     }
 
     .nav-menu a:hover {
         color: #000000;
-        /* Change color on hover */
         font-weight: 500;
-    }
+    } */
 
     /* hero */
     .hero {

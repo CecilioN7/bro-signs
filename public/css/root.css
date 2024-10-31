@@ -1,0 +1,143 @@
+:root {
+    --desertStorm: #fdfdf7;
+    --foggyMist: #ededed;
+    --midnightAsh: #333438;
+    --slateShadow: #47484c;
+    --cloudGrey: #94969e;
+    --ivoryMist: #fdfdf7;
+    --ironOre: #85898a;
+    --oceanBreeze: #5f9ea0;
+
+    /* padding */
+    --mobilePadding: 0 1rem;
+    --desktopPadding: 0 2rem;
+    --sectionPadding: 3rem 1rem;
+
+    /* Margin Bottom Values */
+    --font-size__700: 5.61rem;
+    /* Equivalent to h1 */
+    --font-size__600: 4.209rem;
+    /* Equivalent to h2 */
+    --font-size__500: 3.157rem;
+    /* Equivalent to h3 */
+    --font-size__400: 2.369rem;
+    /* Equivalent to h4 */
+    --font-size__300: 1.777rem;
+    /* Equivalent to h5 */
+    --font-size__200: 1.333rem;
+    /* Equivalent to h6 */
+    --font-size__100: 1rem;
+    /* Equivalent to p */
+    --font-size__050: 0.75rem;
+    /* Equivalent to small */
+    --font-size__025: 0.563rem;
+    /* Extra small */
+
+    font-size: 1rem;
+
+    /* Raw size variables */
+
+    --md: 1em;
+    /* It's okay to use em here because the root font size
+                    has been manually set to 1rem */
+
+    --scaleFactor: 1.618;
+
+    --sm: calc(var(--md) / var(--scaleFactor));
+    --xs: calc(var(--sm) / var(--scaleFactor));
+    --xxs: calc(var(--xs) / var(--scaleFactor));
+
+    --lg: calc(var(--md) * var(--scaleFactor));
+    --xl: calc(var(--lg) * var(--scaleFactor));
+    --xxl: calc(var(--xl) * var(--scaleFactor));
+    --xxxl: calc(var(--xxl) * var(--scaleFactor));
+
+}
+/* .site-header {
+    background-color: #fdfdf792;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    backdrop-filter: blur(10px);
+} */
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav {
+    height: 4rem;
+    background-color: purple;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav a {
+    height: 100%;
+    padding: 0 var(--xxl);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--midnightAsh);
+}
+nav a:hover{
+    background-color: pink;
+}
+nav .home-link {
+    margin-right: auto;
+}
+
+#sidebar-active {
+    display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .links-container{
+        flex-direction: column;
+        align-items: flex-end;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 75svw;
+        background-color: yellow;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.5s ease-out;
+    }
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: var(--md), var(--lg);
+        justify-content: flex-start;
+    }
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: var(--lg);
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
