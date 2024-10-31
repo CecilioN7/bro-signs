@@ -8,24 +8,13 @@
     </head>
 </head>
 <body>
-  <div class="form-container">
-    <form class="contact-form">
-      <h2>Contact Form</h2>
-      <label for="name">First and Last Name</label>
-      <input type="text" id="name" name="name" placeholder="First and Last Name" required>
-  
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-  
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" placeholder="Address">
-  
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
-  
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </div>
+  <div class="file-upload">
+    <label for="file-input" class="custom-file-upload">
+        Click to Upload Images
+    </label>
+    <input id="file-input" type="file" multiple />
+</div>
+
 </body>
 
 </html>
