@@ -53,6 +53,15 @@
     --xxxl: calc(var(--xxl) * var(--scaleFactor));
 
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    /* Apply the Google Font */
+}
+
 .site-header {
     background-color: #fdfdf792;
     position: fixed;
@@ -86,7 +95,7 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--midnightAsh);
+    color: var(--desertStorm);
 }
 nav a:hover{
     color: black;
@@ -130,7 +139,7 @@ nav a:hover{
         width: 100%;
         padding: var(--lg);
         justify-content: flex-start;
-        color: var(--midnightAsh);
+        color: var(--desertStorm);
         font-weight: 600;
         font-size: var(--font-size__200);
     }
