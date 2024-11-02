@@ -243,4 +243,22 @@ footer ul {
         left: 0;
         z-index: 9;
     }
+
+    /* footer */
+    footer {
+        padding: 0 var(--lg);
+    }
+    footer .footer-container {
+        grid-template-columns: 1fr;
+        gap: var(--xl);
+    }
+    footer .footer-card {
+        gap: var(--md);
+    }
+    footer ul {
+        gap: var(--xs);
+    }
+    footer .footer-bottom {
+        font-size: var(--font-size__025);
+    }
 }
