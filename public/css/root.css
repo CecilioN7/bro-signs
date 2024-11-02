@@ -130,8 +130,8 @@ nav a:hover{
 
 /* footer */
 footer {
-    padding: var(--xxxl) var(--xl);
     background-color: var(--midnightAsh);
+    padding: 0 var(--xl);
 }
 
 footer .container {
@@ -143,21 +143,58 @@ footer .footer-bottom {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--cloudGrey);
-    color: var(--cloudGrey);
+    padding: var(--md) 0;
+    font-size: var(--font-size__050);
 }
 
 .footer-bottom a:hover {
     color: var(--desertStorm);
 }
 
+footer .footer-bottom p {
+    font-weight: 300;
+    color: var(--cloudGrey);
+}
+
 footer .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: var(--xxl) 0;
 }
 
 footer a {
     color: inherit;
     text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--desertStorm);
+    text-decoration: underline;
+}
+
+footer h1,
+footer p,
+footer li {
+    color: var(--desertStorm);
+    list-style-type: none;
+    font-weight: 300;
+}
+
+footer h1 {
+    font-size: var(--font-size__200);
+    font-weight: 400;
+}
+
+footer .footer-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg);
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xs);
 }
 
 @media (max-width: 768px) {
