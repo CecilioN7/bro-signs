@@ -1,5 +1,65 @@
 @import url('root.css');
 
-@media (width >=768px) {
+img {
+    height: 100%;
+    width: 100%;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--xl) var(--lg);
+    /* mobile padding */
+    gap: var(--lg);
+}
+
+.projects-title h1 {
+    font-size: var(--font-size__500);
+    color: var(--midnightAsh);
+}
+
+.projects-title p {
+    color: var(--midnightAsh);
+}
+
+/* grid */
+
+.photos-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    padding: var(--xl) var(--lg);
+    /* mobile padding */
+    gap: var(--lg);
+    justify-content: center;
+}
+
+.photos-grid img {
+    border-radius: var(--md);
+}
+
+@media (width >=768px) {
+    .projects-title {
+        padding: var(--xxxl) var(--xl);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        padding: 0;
+    }
+
+    .projects-title p {
+        font-size: var(--font-size__200);
+    }
+
+    /* photos */
+
+    .photos-grid {
+        padding: var(--xxxl) var(--xl);
+    }
+
+    .photos-grid .container {
+        padding: 0;
+    }
 }
