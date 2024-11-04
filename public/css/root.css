@@ -78,6 +78,10 @@ body {
     width: auto;
 }
 
+.accent {
+    color: var(--cloudGrey);
+}
+
 /* navigation */
 
 .site-header {
@@ -177,12 +181,12 @@ footer p,
 footer li {
     color: var(--desertStorm);
     list-style-type: none;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 footer h1 {
     font-size: var(--font-size__200);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 footer .footer-card {
@@ -213,7 +217,7 @@ footer ul {
         z-index: 10;
         width: 75svw;
         height: 100vh;
-        background-color: var(--midnightAsh);
+        background-color: var(--desertStorm);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.5s ease-out;
     }
@@ -223,7 +227,7 @@ footer ul {
         width: 100%;
         padding: var(--lg);
         justify-content: flex-start;
-        color: var(--desertStorm);
+        color: var(--midnightAsh);
         font-weight: 600;
         font-size: var(--font-size__200);
     }
@@ -253,10 +257,10 @@ footer ul {
         gap: var(--xl);
     }
     footer .footer-card {
-        gap: var(--md);
+        gap: var(--sm);
     }
     footer ul {
-        gap: var(--xs);
+        gap: var(--xxs);
     }
     footer .footer-bottom {
         font-size: var(--font-size__025);

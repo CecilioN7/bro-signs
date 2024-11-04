@@ -71,3 +71,28 @@ contactForm.addEventListener('submit', (e)=>{
     xhr.send(JSON.stringify(formData))
 
 })
+
+
+// change video source
+function updateVideoSource() {
+    const video = document.getElementById('responsive-video');
+    const screenWidth = window.innerWidth;
+    let newSource;
+  
+    if (screenWidth >= 768) {
+      newSource = '/video/about.mp4';
+    } else {
+      newSource = '/video/about.mp4';
+    }
+  
+    const currentSource = video.querySelector('source').getAttribute('src');
+    if (newSource !== currentSource) {
+      video.querySelector('source').setAttribute('src', newSource);
+      video.load(); // Reload the video with the new source
+    }
+  }
+  
+  // Run the function on page load and on resize
+  updateVideoSource();
+  window.addEventListener('resize', updateVideoSource);
+  
