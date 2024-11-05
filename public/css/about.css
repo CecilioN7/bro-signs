@@ -2,7 +2,8 @@
 .about-banner .container{
     display: flex;
     flex-direction: column;
-    padding: var(--xl) var(--lg);
+    padding: var(--xxxl) var(--lg);
+    padding-top: var(--xl);
 }
 .about-banner .about-title {
     padding-bottom: var(--xl);
@@ -44,7 +45,7 @@
 #vision .container {
     display: grid;
     gap: var(--xl);
-    padding: var(--xl) var(--lg);
+    padding: var(--xxxl) var(--lg);
     background-color: var(--midnightAsh);
     color: var(--desertStorm);
 }
@@ -87,35 +88,5 @@
     font-size: var(--font-size__100);
     font-weight: 500;
 }
-/* 
-.about-banner .container {
-    display: flex;
-    flex-direction: column;
-    padding: var(--xl) var(--lg);
-}
-.about-banner .about-title {
-    padding-bottom: var(--xl);
-    background-color: yellow;
-}
-.about-banner video {
-    height: 30rem;
-    object-fit: cover;
-    border-radius: var(--md);
-}
-
-.about-banner h1 {
-    font-size: var(--font-size__400);
-    color: var(--midnightAsh);
-}
-.about-banner p {
-    font-weight: 700;
-}
-.about-banner .brand{
-    color: var(--cloudGrey);
-}
-
-.about-banner .description{
-    color: var(--midnightAsh);
-} */
 
 @media (width >=768px) {}
