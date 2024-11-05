@@ -82,7 +82,43 @@ body {
     color: var(--cloudGrey);
 }
 
+/* icon */
+.icon {
+    height: var(--xxl);
+    width: var(--xxl);
+    border-radius: var(--md);
+    padding: var(--sm);
+}
+
+/* button */
+.submit-btn {
+    width: 100%;
+    padding: var(--md);
+    font-weight: bold;
+    font-size: var(--font-size__100);
+    background-color: var(--oceanBreeze);
+    border-radius: var(--lg);
+    color: var(--desertStorm);
+    border: none;
+    font-size: var(--font-size__100);
+}
+
+button:focus {
+    outline: none; /* Removes the focus outline */
+    box-shadow: none; /* Removes any shadow */
+    border-color: transparent; /* Optional: Removes the border color */
+}
+
+button { /* Removes the tap highlight */
+    -webkit-appearance: none; /* Disables default styles on iOS */
+    appearance: none; /* Disables default styles on other platforms */
+}
+
 /* navigation */
+.nav-spacing {
+    padding: var(--lg);
+    background-color: orange;
+}
 
 .site-header {
     background-color: #fdfdf792;
@@ -98,7 +134,7 @@ body {
 }
 
 nav {
-    height: 4rem;
+    padding: var(--md);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,13 +1,101 @@
 
-
-.about-banner .container {
+.about-banner .container{
     display: flex;
     flex-direction: column;
-    gap: var(--lg);
     padding: var(--xl) var(--lg);
 }
 .about-banner .about-title {
     padding-bottom: var(--xl);
+}
+
+.about-banner .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md);
+}
+
+.about-banner video {
+    height: 30rem;
+    object-fit: cover;
+    border-radius: var(--md);
+}
+
+.about-banner .video-subheading {
+    display: grid;
+    gap: var(--md);
+}
+
+.about-banner h1 {
+    font-size: var(--font-size__400);
+    color: var(--midnightAsh);
+}
+.about-banner p {
+    font-weight: 700;
+}
+.about-banner .brand{
+    color: var(--cloudGrey);
+}
+
+.about-banner .description{
+    color: var(--midnightAsh);
+}
+
+/* vision */
+#vision .container {
+    display: grid;
+    gap: var(--xl);
+    padding: var(--xl) var(--lg);
+    background-color: var(--midnightAsh);
+    color: var(--desertStorm);
+}
+
+#vision .description {
+    display: grid;
+    gap: var(--md);
+}
+
+.icon {
+    background-color: #D9D9D9;
+}
+
+.icon svg {
+    fill: var( --oceanBreeze);
+}
+
+#vision .cards {
+    display: grid;
+    gap: var(--md);
+}
+
+#vision .card-item {
+    display: grid;
+    gap: var(--md);
+
+    background-color: var(--slateShadow);
+    border-radius: var(--md);
+    padding: var(--xl) var(--lg);
+}
+#vision h1 {
+    font-size: var(--font-size__400);
+}
+
+#vision h2 {
+    font-size: var(--font-size__200);
+    font-weight: 600;
+}
+#vision p {
+    font-size: var(--font-size__100);
+    font-weight: 500;
+}
+/* 
+.about-banner .container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--xl) var(--lg);
+}
+.about-banner .about-title {
+    padding-bottom: var(--xl);
+    background-color: yellow;
 }
 .about-banner video {
     height: 30rem;
@@ -28,6 +116,6 @@
 
 .about-banner .description{
     color: var(--midnightAsh);
-}
+} */
 
 @media (width >=768px) {}
