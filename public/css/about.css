@@ -60,7 +60,7 @@
 
 #mission img {
     border-radius: var(--md);
-    height: 30rem;
+    height: 15rem;
     width: 100%;
     object-fit: cover;
 }
@@ -76,6 +76,7 @@
 #story {
     background-color: var(--desertStorm);
 }
+
 #story .container {
     display: grid;
     gap: var(--md);

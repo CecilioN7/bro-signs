@@ -20,7 +20,7 @@ video {
     height: 100%;
 }
 
-h1 {
+/* h1 {
     margin-bottom: var(--lg);
     font-size: var(--font-size__400);
 }
@@ -33,7 +33,7 @@ h2 {
 p {
     font-size: var(--font-size__100);
     font-weight: 600;
-}
+} */
 
 .accent {
     color: var(--cloudGrey);
@@ -43,14 +43,53 @@ p {
 #hero {
     position: relative;
     width: auto;
-    height: 90vh;
+    height: 95svh;
     /* Full screen height */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: var(--xxl); */
+}
+
+#hero .container {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: var(--xxl);
+    gap: var(--md);
+
+    height: 95svh;
+    padding: var(--xl) var(--lg);
+    /* background-color: orange; */
 }
 
+#hero .gradient {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    /* Gradient from blue to green, going from top to bottom */
+    background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.526) 100%);
+}
+
+#hero picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 75% center;
+    z-index: -1;
+}
+
+#hero h1 {
+    color: var(--desertStorm);
+    font-size: var(--font-size__300);
+}
+
+/* 
 #hero .section {
     display: grid;
     gap: var(--xxl);
@@ -68,7 +107,7 @@ p {
     padding: var(--mobilePadding);
 }
 
-/* Hero Image */
+
 #hero picture img {
     position: absolute;
     top: 0;
@@ -76,52 +115,59 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures the image fills the container without distortion */
     object-position: 75% center;
     z-index: -1;
-    /* Sends image to the background */
 }
 
-/* Hero Heading */
 #hero h1 {
     color: var(--desertStorm);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 0;
-}
+} */
 
 /* services */
 #services {
-    padding: var(--mobilePadding);
+    padding: var(--xxxl) var(--lg);
     text-align: center;
 }
 
 #services .container {
-    background-color: var(--foggyMist);
-    border-radius: var(--lg);
+    display: grid;
+    gap: var(--xl);
+}
+
+#services .services-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 2rem;
     gap: var(--lg);
+
+    background-color: var(--foggyMist);
+    border-radius: var(--lg);
+    padding: var(--xl) var(--lg);
 }
 
 #services .card {
-    height: auto;
     max-width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.icon-box {
+#services .icon-box {
     background-color: var(--midnightAsh);
-    height: 4rem;
-    width: 4rem;
-    padding: .5rem;
-    font-size: 0;
-    border-radius: 0.5rem;
-    margin-bottom: .5rem;
+    display: flex;
+    height: var(--xxl);
+    width: var(--xxl);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--md);
+}
+
+#services img {
+    height: var(--xl);
+    width: var(--xl);
 }
 
 #services h1 {
@@ -142,15 +188,14 @@ p {
 }
 
 /* hook */
-
 #hook {
     background-image: url(../images/hook-background-mobile.png);
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    padding: var(--sectionPadding);
     background-color: var(--midnightAsh);
+    padding: var(--xxxl) var(--lg);
 }
 
 #hook .container {
@@ -170,28 +215,23 @@ p {
     border-right: 2px solid rgba(238, 146, 254, 0.323);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.146);
 
-    padding: 3rem 2rem;
+    padding: var(--xl) var(--lg);
     width: 100%;
     height: auto;
     z-index: 1;
     display: grid;
+    gap: var(--md);
 }
 
 .video-container {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    gap: var(--md)
 }
 
 #hook video {
-    width: 100%;
-    height: auto;
+    height: 30rem;
     object-fit: cover;
-    border-radius: var(--lg);
+    border-radius: var(--md);
 }
 
 #hook h2 {
@@ -201,60 +241,121 @@ p {
 
 #hook p {
     color: var(--desertStorm);
-    font-size: var(--font-size__200);
+    font-size: var(--font-size__100);
 }
 
 /* benefits */
 
-.benefits .container {
+#benefits .container {
     display: grid;
-    padding: var(--mobilePadding);
-    gap: var(--xl);
+    gap: var(--xxl);
+
+    padding: var(--xxxl) var(--lg);
 }
 
-.benefits img {
+#benefits .service-card,
+#benefits .service-card-reversed {
+    display: grid;
+    gap: var(--md);
+}
+
+#benefits .text {
+    display: grid;
+    gap: var(--md);
+}
+
+#benefits img {
     width: 100%;
-    height: 30svh;
+    height: 15rem;
     object-fit: cover;
     border-radius: 1.5rem;
 }
 
-.benefits h2 {
-    font-size: var(--font-size__400);
-    margin-bottom: var(--xxs);
+#benefits h2 {
+    font-size: var(--font-size__300);
 }
 
-.benefits p {
+#benefits p {
     color: var(--ironOre);
-    font-size: var(--font-size__200);
+    font-size: var(--font-size__100);
 }
 
 /* reviews */
-
 #reviews {
     background-color: var(--foggyMist);
-    padding: var(--sectionPadding);
+
 }
 
 #reviews .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xl);
+    /* justify-content: center; */
+    padding: var(--xxxl) var(--lg);
+}
+
+#reviews .reviews-container {
     display: grid;
     gap: var(--md);
-    /* justify-content: center; */
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
 }
 
-.review-card {
+#reviews picture img {
+    width: var(--xxl);
+    height: var(--xxl);
+}
+
+#reviews .review-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md);
+
+
     border-radius: var(--lg);
     box-shadow: 0rem 0rem 3rem 0rem rgba(0, 0, 0, 0.217);
     padding: var(--xl) var(--lg);
-    height: 100%;
     position: relative;
 }
 
-#reviews img {
+#reviews .text {
+    height: calc(100% - var(--xxl));
+    display: flex;
+    gap: var(--md);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#reviews .profile-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#reviews .profile-name img {
+    width: var(--xxl);
+}
+
+#reviews h1 {
+    font-size: var(--font-size__300);
+}
+
+#reviews p {
+    font-size: var(--font-size__100);
+    color: var(--midnightAsh);
+    font-weight: 600;
+    font-style: italic;
+}
+
+#reviews .profile-name p {
+    font-size: var(--font-size__100);
+    color: var(--cloudGrey);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* #reviews img {
     width: var(--xxl);
     height: auto;
-    margin-bottom: var(--md);
 }
 
 .profile-name {
@@ -289,44 +390,36 @@ p {
     font-style: italic;
 }
 
-.profile-name p {
-    font-style: normal;
-}
-
 #reviews .profile-name p {
+    font-style: normal;
     color: var(--cloudGrey);
     margin-bottom: 0;
     position: absolute;
     bottom: var(--xl);
     width: 50%;
-}
+} */
 
 /* locations */
-
-#locations {
-    padding: var(--sectionPadding);
-}
-
 #locations .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: var(--md);
-}
-
-#locations .container> :first-child {
-    grid-column: span 2;
+    
+    padding: var(--xxxl) var(--lg);
+    padding-bottom: 0;
 }
 
 #locations .location-1 {
     grid-column: span 2;
 }
 
-#locations img {
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
-    border-radius: 1.5rem;
-    margin-bottom: var(--md);
+#locations .location-2,
+#locations .location-3 {
+    grid-column: span 1; /* Ensures these cards only span one column each */
+}
+
+#locations h1 {
+    grid-column: span 2;
 }
 
 .location-1 {
@@ -346,190 +439,20 @@ p {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 40vh;
+    height: 15rem;
     object-fit: cover;
-    border-radius: var(--lg);
-    margin-bottom: var(--md);
+    border-radius: var(--md);
 
     display: flex;
     flex-direction: column;
     justify-content: end;
 
     color: var(--desertStorm);
-    padding: 0 var(--lg);
+    padding: var(--md);
 }
 
-.desktop {
+#locations .desktop {
     display: none;
-}
-
-/* frequently asked questions */
-.faq {
-    padding: var(--sectionPadding);
-}
-
-.faq .faq-container {
-    display: flex;
-    gap: var(--lg);
-    cursor: pointer;
-    border-bottom: 1px solid var(--cloudGrey);
-    margin-bottom: var(--lg);
-}
-
-.faq-container:hover .number h3,
-.faq-container:hover h2 {
-    color: var(--midnightAsh);
-    /* Change this to your desired hover color */
-}
-
-
-.number {
-    display: flex;
-}
-
-.faq h1 {
-    color: var(--midnightAsh);
-}
-
-.faq h3 {
-    margin-top: 0.25rem;
-    color: var(--cloudGrey);
-    transition: all 0.2s linear;
-    font-weight: 400;
-}
-
-.faq h2 {
-    /* border: solid red; */
-    color: var(--cloudGrey);
-    transition: all 0.2s linear;
-}
-
-.answer p {
-    margin-bottom: var(--lg);
-    color: var(--cloudGrey);
-}
-
-.answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-}
-
-.faq-container.active .answer {
-    /* max-height: 300px; */
-    color: var(--cloudGrey);
-}
-
-.faq-container.active h2,
-.faq-container.active h3 {
-    color: var(--midnightAsh);
-}
-
-/* call-to-action */
-
-.call-to-action {
-    background-color: var(--foggyMist);
-    display: flex;
-    flex-direction: column;
-    gap: var(--xl);
-    padding: 0rem;
-}
-
-.call-to-action .container {
-    padding: var(--sectionPadding);
-    width: 100%;
-}
-
-.call-to-action h1 {
-    color: var(--midnightAsh);
-    margin-bottom: var(--xs);
-}
-
-.call-to-action p {
-    color: var(--ironOre);
-    font-size: var(--font-size__200);
-    margin-bottom: var(--xl);
-}
-
-.button-1 {
-    display: block;
-    /* Ensures the button takes full width */
-    text-align: center;
-    /* Centers the text inside the button */
-    border: none;
-    width: 100%;
-    background-color: var(--oceanBreeze);
-    color: var(--desertStorm);
-    border-radius: var(--xxl);
-    padding: var(--md);
-    text-decoration: none;
-    /* Removes underline */
-}
-
-.button-1 h2 {
-    margin-bottom: 0;
-    font-size: var(--font-size__200);
-    color: inherit;
-    /* Inherits the color from the parent element (button-1) */
-}
-
-/* Optional: Add hover effect */
-.button-1:hover {
-    background-color: #4e8687;
-    /* Define a hover variable or color */
-    cursor: pointer;
-}
-
-.button-2 {
-    display: block;
-    /* Ensures the button takes full width */
-    text-align: center;
-    /* Centers the text inside the button */
-    border: none;
-    width: 100%;
-    background-color: transparent;
-    color: var(--desertStorm);
-    border-radius: var(--xxl);
-    padding: var(--md);
-    text-decoration: none;
-    /* Removes underline */
-    border: 0.25rem solid var(--desertStorm);
-}
-
-.button-2 h2 {
-    margin-bottom: 0;
-    font-size: var(--font-size__200);
-    color: inherit;
-    /* Inherits the color from the parent element (button-1) */
-}
-
-/* Optional: Add hover effect */
-.button-2:hover {
-    background-color: var(--desertStorm);
-    /* Define a hover variable or color */
-    cursor: pointer;
-    color: var(--midnightAsh);
-}
-
-
-.call-to-action .picture {
-    width: 100%;
-    height: 45svh;
-    position: relative;
-}
-
-.gradient {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    /* Gradient from blue to green, going from top to bottom */
-    background: linear-gradient(to top, #ededed00 30%, #ededed 100%);
-
-}
-
-.call-to-action img {
-    object-fit: cover;
 }
 
 /* Fallback for mobile/touch devices */
@@ -545,7 +468,7 @@ p {
         width: auto;
     }
     /* hero */
-    #hero {
+    /* #hero {
         padding-bottom: var(--xxxl);
         padding: var(--desktopPadding);
         padding-bottom: var(--xxl);
@@ -569,7 +492,7 @@ p {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--md);
-    }
+    } */
 
     /* services */
     #services {
@@ -640,21 +563,21 @@ p {
     }
 
     /* benefits */
-    .benefits {
+    #benefits {
         padding: var(--desktopPadding);
     }
 
-    .benefits .container {
+    #benefits .container {
         padding: 0rem;
     }
 
-    .benefits .service-card {
+    #benefits .service-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--xl);
     }
 
-    .benefits .service-card-reversed {
+    #benefits .service-card-reversed {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--xl);
@@ -671,7 +594,7 @@ p {
         /* Image in the second column */
     }
 
-    .benefits img {
+    #benefits img {
         width: 1fr;
     }
 

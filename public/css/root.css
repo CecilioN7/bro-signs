@@ -66,6 +66,10 @@ p {
     font-weight: 400;
 }
 
+a {
+    font-weight: 400;
+}
+
 
 body {
     background-color: var(--desertStorm);
@@ -410,6 +414,10 @@ footer ul {
 
 @media (max-width: 768px) {
     p {
+        font-weight: 500;
+    }
+    
+    a {
         font-weight: 500;
     }
 
