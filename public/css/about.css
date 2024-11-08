@@ -1,4 +1,4 @@
-
+/* about banner */
 #about-banner .container{
     display: flex;
     flex-direction: column;
@@ -60,12 +60,22 @@
 
 #mission img {
     border-radius: var(--md);
-    height: 100%;
+    height: 30rem;
     width: 100%;
     object-fit: cover;
 }
+#mission h1 {
+    color: var(--midnightAsh);
+    font-size: var(--font-size__400);
+}
+#mission p {
+    color: var(--midnightAsh);
+}
 
 /* story */
+#story {
+    background-color: var(--desertStorm);
+}
 #story .container {
     display: grid;
     gap: var(--md);
@@ -88,6 +98,14 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+#story h1 {
+    color: var(--midnightAsh);
+    font-size: var(--font-size__400);
+}
+
+#story p {
+    color: var(--midnightAsh);
 }
 
 /* vision */
@@ -129,6 +147,7 @@
 }
 #vision h1 {
     font-size: var(--font-size__400);
+    font-weight: 600;
 }
 
 #vision h2 {

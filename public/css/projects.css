@@ -8,11 +8,11 @@ img {
     flex-direction: column;
     padding: var(--xl) var(--lg);
     /* mobile padding */
-    gap: var(--lg);
+    gap: var(--md);
 }
 
 #projects-title h1 {
-    font-size: var(--font-size__500);
+    font-size: var(--font-size__400);
     color: var(--midnightAsh);
 }
 
@@ -25,7 +25,7 @@ img {
 #photos-grid .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-    padding: var(--xl) var(--lg);
+    padding: 0 var(--lg);
     /* mobile padding */
     gap: var(--lg);
     justify-content: center;
