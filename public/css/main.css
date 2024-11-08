@@ -40,7 +40,7 @@ p {
 }
 
 /* hero */
-.hero {
+#hero {
     position: relative;
     width: auto;
     height: 90vh;
@@ -51,7 +51,7 @@ p {
     padding-bottom: var(--xxl);
 }
 
-.hero .section {
+#hero .section {
     display: grid;
     gap: var(--xxl);
 }
@@ -61,7 +61,7 @@ p {
     gap: var(--md);
 }
 
-.hero .container {
+#hero .container {
     display: flex;
     flex-direction: column;
     gap: var(--lg);
@@ -69,7 +69,7 @@ p {
 }
 
 /* Hero Image */
-.hero picture img {
+#hero picture img {
     position: absolute;
     top: 0;
     left: 0;
@@ -83,19 +83,19 @@ p {
 }
 
 /* Hero Heading */
-.hero h1 {
+#hero h1 {
     color: var(--desertStorm);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 0;
 }
 
 /* services */
-.services {
+#services {
     padding: var(--mobilePadding);
     text-align: center;
 }
 
-.services .container {
+#services .container {
     background-color: var(--foggyMist);
     border-radius: var(--lg);
     display: flex;
@@ -106,7 +106,7 @@ p {
     gap: var(--lg);
 }
 
-.services .card {
+#services .card {
     height: auto;
     max-width: 20rem;
     display: flex;
@@ -124,26 +124,26 @@ p {
     margin-bottom: .5rem;
 }
 
-.services h1 {
+#services h1 {
     color: var(--midnightAsh);
     font-size: var(--font-size__300);
     white-space: pre-line;
 }
 
-.services h2 {
+#services h2 {
     color: var(--midnightAsh);
     font-size: var(--font-size__200);
     margin-bottom: 0;
 }
 
-.services p {
+#services p {
     color: var(--cloudGrey);
     font-size: var(--font-size__100);
 }
 
 /* hook */
 
-.hook {
+#hook {
     background-image: url(../images/hook-background-mobile.png);
     background-size: cover;
     background-position: bottom;
@@ -153,7 +153,7 @@ p {
     background-color: var(--midnightAsh);
 }
 
-.hook .container {
+#hook .container {
     display: grid;
     gap: var(--md);
 }
@@ -187,19 +187,19 @@ p {
     justify-content: center;
 }
 
-.hook video {
+#hook video {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: var(--lg);
 }
 
-.hook h2 {
+#hook h2 {
     color: var(--desertStorm);
     font-size: var(--font-size__400);
 }
 
-.hook p {
+#hook p {
     color: var(--desertStorm);
     font-size: var(--font-size__200);
 }
@@ -231,12 +231,12 @@ p {
 
 /* reviews */
 
-.reviews {
+#reviews {
     background-color: var(--foggyMist);
     padding: var(--sectionPadding);
 }
 
-.reviews .container {
+#reviews .container {
     display: grid;
     gap: var(--md);
     /* justify-content: center; */
@@ -251,7 +251,7 @@ p {
     position: relative;
 }
 
-.reviews img {
+#reviews img {
     width: var(--xxl);
     height: auto;
     margin-bottom: var(--md);
@@ -271,7 +271,7 @@ p {
     right: var(--md);
 }
 
-.reviews h1 {
+#reviews h1 {
     grid-column: 1 / -1;
     margin-bottom: var(--md);
 }
@@ -280,7 +280,7 @@ p {
     font-weight: 900;
 }
 
-.reviews p {
+#reviews p {
     font-size: var(--font-size__100);
 
     margin-bottom: var(--xl);
@@ -293,7 +293,7 @@ p {
     font-style: normal;
 }
 
-.reviews .profile-name p {
+#reviews .profile-name p {
     color: var(--cloudGrey);
     margin-bottom: 0;
     position: absolute;
@@ -303,25 +303,25 @@ p {
 
 /* locations */
 
-.locations {
+#locations {
     padding: var(--sectionPadding);
 }
 
-.locations .container {
+#locations .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--md);
 }
 
-.locations .container> :first-child {
+#locations .container> :first-child {
     grid-column: span 2;
 }
 
-.locations .location-1 {
+#locations .location-1 {
     grid-column: span 2;
 }
 
-.locations img {
+#locations img {
     width: 100%;
     height: 40vh;
     object-fit: cover;
@@ -341,7 +341,7 @@ p {
     background-image: url(../images/location3.webp);
 }
 
-.locations .location-card {
+#locations .location-card {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -534,7 +534,7 @@ p {
 
 /* Fallback for mobile/touch devices */
 @supports (-webkit-touch-callout: none) {
-    .hook {
+    #hook {
         background-attachment: scroll;
     }
 }
@@ -545,38 +545,38 @@ p {
         width: auto;
     }
     /* hero */
-    .hero {
+    #hero {
         padding-bottom: var(--xxxl);
         padding: var(--desktopPadding);
         padding-bottom: var(--xxl);
     }
 
-    .hero .container {
+    #hero .container {
         padding: 0;
     }
 
-    .hero .section {
+    #hero .section {
         display: grid;
         max-width: 40rem;
         gap: var(--md);
     }
 
-    .hero h1 {
+    #hero h1 {
         font-size: var(--font-size__600);
     }
 
-    .hero-buttons {
+    #hero-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--md);
     }
 
     /* services */
-    .services {
+    #services {
         padding: var(--desktopPadding)
     }
 
-    .services .container {
+    #services .container {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -589,31 +589,31 @@ p {
         border-radius: 1.5rem;
     }
 
-    .services .card {
+    #services .card {
         max-width: 12rem;
         display: flex;
         align-items: flex-start;
         text-align: left;
     }
 
-    .services h1 {
+    #services h1 {
         white-space: normal;
         font-size: var(--font-size__400);
     }
 
-    .services h2 {
+    #services h2 {
         font-size: var(--font-size__300);
     }
 
     /* hook */
 
-    .hook {
+    #hook {
         background-image: url(../images/hook-background-desktop.png);
         padding: 3rem 2rem;
         /* section desktop padding */
     }
 
-    .hook .container {
+    #hook .container {
         display: flex;
         flex-direction: row;
     }
@@ -635,7 +635,7 @@ p {
         max-width: 18rem;
     }
 
-    .hook video {
+    #hook video {
         object-fit: contain;
     }
 
@@ -676,21 +676,21 @@ p {
     }
 
     /* reviews */
-    .reviews {
+    #reviews {
         padding: 3rem 2rem;
         /* desktop section padding */
     }
 
-    .reviews .container {
+    #reviews .container {
         grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
     }
 
     /* locations */
-    .locations {
+    #locations {
         padding: 3rem 2rem;
     }
 
-    .locations .container {
+    #locations .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
@@ -699,11 +699,11 @@ p {
         display: block;
     }
 
-    .locations .container> :first-child {
+    #locations .container> :first-child {
         grid-column: span 4;
     }
 
-    .locations .container> :nth-child(5) {
+    #locations .container> :nth-child(5) {
         /* Your styles for the fourth child */
         grid-column: span 2;
     }

@@ -1,52 +1,55 @@
 
-.about-banner .container{
+#about-banner .container{
     display: flex;
     flex-direction: column;
     padding: var(--xxxl) var(--lg);
     padding-top: var(--xl);
 }
-.about-banner .about-title {
+#about-banner .about-title {
     padding-bottom: var(--xl);
 }
 
-.about-banner .video-container {
+#about-banner .video-container {
     display: flex;
     flex-direction: column;
     gap: var(--md);
 }
 
-.about-banner video {
+#about-banner video {
     height: 30rem;
     object-fit: cover;
     border-radius: var(--md);
 }
 
-.about-banner .video-subheading {
+#about-banner .video-subheading {
     display: grid;
     gap: var(--md);
 }
 
-.about-banner h1 {
+#about-banner h1 {
     font-size: var(--font-size__400);
     color: var(--midnightAsh);
 }
-.about-banner p {
+#about-banner p {
     font-weight: 700;
 }
-.about-banner .brand{
+#about-banner .brand{
     color: var(--cloudGrey);
 }
 
-.about-banner .description{
+#about-banner .description{
     color: var(--midnightAsh);
 }
 
 /* vision */
+
+#vision {
+    background-color: var(--midnightAsh);
+}
 #vision .container {
     display: grid;
     gap: var(--xl);
     padding: var(--xxxl) var(--lg);
-    background-color: var(--midnightAsh);
     color: var(--desertStorm);
 }
 
