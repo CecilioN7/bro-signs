@@ -163,10 +163,6 @@ button { /* Removes the tap highlight */
 }
 
 /* navigation */
-.nav-spacing {
-    padding: var(--lg);
-    background-color: orange;
-}
 
 .site-header {
     background-color: #fdfdf792;

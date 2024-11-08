@@ -41,8 +41,56 @@
     color: var(--midnightAsh);
 }
 
-/* vision */
+/* mission */
+#mission {
+    background-color: var(--foggyMist);
+}
 
+#mission .container {
+    display: grid;
+    gap: var(--md);
+
+    padding: var(--xxxl) var(--lg);
+}
+
+#mission .mission-description {
+    display: grid;
+    gap: var(--md);
+}
+
+#mission img {
+    border-radius: var(--md);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* story */
+#story .container {
+    display: grid;
+    gap: var(--md);
+    grid-template-columns: 1fr 1fr;
+    padding: var(--xxxl) var(--lg);
+}
+
+#story .picture-1 {
+    grid-column: span 2;
+}
+
+#story .story-description {
+    display: grid;
+    gap: var(--md);
+    grid-column: span 2;
+}
+
+#story img {
+    border-radius: var(--md);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* vision */
 #vision {
     background-color: var(--midnightAsh);
 }
