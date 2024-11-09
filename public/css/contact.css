@@ -1,5 +1,3 @@
-@import url('root.css');
-
 /* contact information */
 #contact {
     display: flex;
@@ -19,7 +17,7 @@
 .contact-information {
     display: flex;
     flex-direction: column;
-    padding: var(--xl) var(--lg); /* mobile padding */
+    padding: var(--xl) var(--lg);
     gap: var(--xl);
     padding-bottom: var(--xxxl);
 }
@@ -56,9 +54,8 @@
 }
 
 #contact h1 {
-    /* background-color: orange; */
     color: var(--midnightAsh);
-    font-size: var(--font-size__500);
+    font-size: var(--font-size__700);
 }
 
 #contact .info {
@@ -83,7 +80,7 @@
 }
 
 #contact-form  h1 {
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__500);
     color: var(--midnightAsh);
 }
 
@@ -138,9 +135,9 @@
 
 input,
 textarea,
-button { /* Removes the tap highlight */
-    -webkit-appearance: none; /* Disables default styles on iOS */
-    appearance: none; /* Disables default styles on other platforms */
+button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 input,
@@ -150,14 +147,14 @@ textarea {
 input:focus,
 textarea:focus,
 button:focus {
-    outline: none; /* Removes the focus outline */
-    box-shadow: none; /* Removes any shadow */
-    border-color: transparent; /* Optional: Removes the border color */
+    outline: none; 
+    box-shadow: none;
+    border-color: transparent;
 }
 
 #contact-form  textarea {
-    resize: vertical; /* Allows vertical resizing only */
-    height: 18rem; /* Set a default height */
+    resize: vertical;
+    height: 18rem;
 }
 
 .submit-btn {
@@ -172,27 +169,14 @@ button:focus {
     font-size: var(--font-size__100);
 }
 
-
-/* estimate contact form */
-
-/* #contact-form  .form-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--lg);
-}
-#contact-form .form-text p {
-    color: var(--cloudGrey);
-} */
-
 @media (width >=768px) {
-    #contact {
+    /* #contact {
         padding: var(--xxxl) var(--xl);
     }
 
     #contact .container {
         display: flex;
         flex-direction: row-reverse;
-        /* background-color: yellow; */
         justify-content: space-between;
     }
     #contact .map {
@@ -211,8 +195,6 @@ button:focus {
         font-size: var(--font-size__600);
     }
 
-    /* contact form */
-
     #contact-form  {
         padding: var(--xxxl) var(--xl);
     }
@@ -220,5 +202,5 @@ button:focus {
     #contact-form  .container {
         border-radius: var(--md);
         padding: var(--xl) var(--xl);
-    }
+    } */
 }

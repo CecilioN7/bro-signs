@@ -13,29 +13,17 @@
     --desktopPadding: 0 2rem;
     --sectionPadding: 3rem 1rem;
 
-    /* Margin Bottom Values */
     --font-size__700: 5.61rem;
-    /* Equivalent to h1 */
     --font-size__600: 4.209rem;
-    /* Equivalent to h2 */
     --font-size__500: 3.157rem;
-    /* Equivalent to h3 */
     --font-size__400: 2.369rem;
-    /* Equivalent to h4 */
     --font-size__300: 1.777rem;
-    /* Equivalent to h5 */
     --font-size__200: 1.333rem;
-    /* Equivalent to h6 */
     --font-size__100: 1rem;
-    /* Equivalent to p */
     --font-size__050: 0.75rem;
-    /* Equivalent to small */
     --font-size__025: 0.563rem;
-    /* Extra small */
 
     font-size: 1rem;
-
-    /* Raw size variables */
 
     --md: 1em;
     /* It's okay to use em here because the root font size
@@ -114,19 +102,13 @@ body {
 
 button:focus {
     outline: none;
-    /* Removes the focus outline */
     box-shadow: none;
-    /* Removes any shadow */
     border-color: transparent;
-    /* Optional: Removes the border color */
 }
 
 button {
-    /* Removes the tap highlight */
     -webkit-appearance: none;
-    /* Disables default styles on iOS */
     appearance: none;
-    /* Disables default styles on other platforms */
 }
 
 .button-1 {
@@ -178,7 +160,6 @@ button {
 }
 
 /* navigation */
-
 .site-header {
     background-color: #fdfdf792;
     position: fixed;
@@ -235,7 +216,7 @@ nav a:hover {
 #faq .container {
     padding: var(--xxxl) var(--lg);
     display: grid;
-    gap: var(--xxl);
+    gap: var(--xl);
 }
 
 #faq .faq-container {
@@ -258,7 +239,7 @@ nav a:hover {
 
 #faq h1 {
     color: var(--midnightAsh);
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__500);
 }
 
 #faq h3 {
@@ -266,7 +247,7 @@ nav a:hover {
     font-weight: 400;
 
     transition: all 0.2s linear;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
 }
 
 #faq h2 {
@@ -335,7 +316,7 @@ nav a:hover {
 
 #call-to-action h1 {
     color: var(--midnightAsh);
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__500);
 }
 
 #call-to-action p {
@@ -413,10 +394,22 @@ footer ul {
 }
 
 @media (max-width: 768px) {
+    :root {
+        --font-size__700: 2.986rem;
+        --font-size__600: 2.488rem;
+        --font-size__500: 2.074rem;
+        --font-size__400: 1.728rem;
+        --font-size__300: 1.44rem;
+        --font-size__200: 1.2rem;
+        --font-size__100: 1rem;
+        --font-size__050: 0.833rem;
+        --font-size__025: 0.694rem;
+    }
+
     p {
         font-weight: 500;
     }
-    
+
     a {
         font-weight: 500;
     }

@@ -27,7 +27,7 @@
 }
 
 #about-banner h1 {
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__600);
     color: var(--midnightAsh);
 }
 #about-banner p {
@@ -66,7 +66,7 @@
 }
 #mission h1 {
     color: var(--midnightAsh);
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__500);
 }
 #mission p {
     color: var(--midnightAsh);
@@ -102,7 +102,7 @@
 }
 #story h1 {
     color: var(--midnightAsh);
-    font-size: var(--font-size__400);
+    font-size: var(--font-size__500);
 }
 
 #story p {
@@ -147,17 +147,16 @@
     padding: var(--xl) var(--lg);
 }
 #vision h1 {
-    font-size: var(--font-size__400);
-    font-weight: 600;
+    font-size: var(--font-size__500);
 }
 
 #vision h2 {
     font-size: var(--font-size__200);
-    font-weight: 600;
 }
 #vision p {
     font-size: var(--font-size__100);
-    font-weight: 500;
 }
 
-@media (width >=768px) {}
+@media (width >=768px) {
+
+}
