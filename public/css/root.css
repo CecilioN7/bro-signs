@@ -13,15 +13,15 @@
     --desktopPadding: 0 2rem;
     --sectionPadding: 3rem 1rem;
 
-    --font-size__700: 5.61rem;
-    --font-size__600: 4.209rem;
-    --font-size__500: 3.157rem;
-    --font-size__400: 2.369rem;
-    --font-size__300: 1.777rem;
-    --font-size__200: 1.333rem;
+    --font-size__700: 3.815rem;
+    --font-size__600: 3.052rem;
+    --font-size__500: 2.441rem;
+    --font-size__400: 1.953rem;
+    --font-size__300: 1.563rem;
+    --font-size__200: 1.25rem;
     --font-size__100: 1rem;
-    --font-size__050: 0.75rem;
-    --font-size__025: 0.563rem;
+    --font-size__050: 0.8rem;
+    --font-size__025: 0.64rem;    
 
     font-size: 1rem;
 
@@ -50,12 +50,10 @@
     /* Apply the Google Font */
 }
 
-p {
-    font-weight: 400;
-}
-
-a {
-    font-weight: 400;
+p, a
+{
+    font-weight: 600;
+    font-size: var(--font-size__200);
 }
 
 
@@ -191,6 +189,7 @@ nav {
 }
 
 nav a {
+    font-size: var(--font-size__100);
     height: 100%;
     padding: 0 var(--xxl);
     display: flex;
@@ -213,16 +212,26 @@ nav a:hover {
 }
 
 /* frequently asked question */
+#faq {
+    padding: 0 var(--xl);
+}
 #faq .container {
-    padding: var(--xxxl) var(--lg);
+    padding: var(--xxxl) 0;
     display: grid;
     gap: var(--xl);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#faq .questions {
+    grid-row: 2;
+    grid-column: 2 / 4;
 }
 
 #faq .faq-container {
     display: flex;
     gap: var(--lg);
     cursor: pointer;
+
     border-bottom: 1px solid var(--cloudGrey);
     margin-bottom: var(--lg);
 }
@@ -279,39 +288,29 @@ nav a:hover {
 }
 
 /* call to action */
+#call-to-action {
+    padding: 0 var(--xl);
+    padding-bottom: var(--xxxl);
+}
+
 #call-to-action .cta-card {
+    background-color: var(--foggyMist);
     display: grid;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--lg);
+    gap: var(--xl);
+
+    max-width: 75rem;
+    margin: 0 auto;
+    width: 100%;
+
+    padding: var(--xl);
 }
 
 #call-to-action .container {
-    display: grid;
-    padding: var(--xxxl) var(--lg);
+    display: flex;
+    flex-direction: column;
     gap: var(--md);
-    background-color: var(--foggyMist);
-}
-
-#call-to-action .gradient {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    background: linear-gradient(to top, #ededed00 30%, #ededed 100%);
-
-}
-
-#call-to-action .picture {
-    width: 100%;
-    max-width: 75rem;
-    height: 45svh;
-    position: relative;
-    margin: 0 auto;
-}
-
-#call-to-action img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 
 #call-to-action h1 {
@@ -323,6 +322,13 @@ nav a:hover {
     color: var(--ironOre);
     font-size: var(--font-size__100);
 }
+
+#call-to-action img {
+    border-radius: var(--md);
+    height: 30rem;
+    object-fit: cover;
+}
+
 
 /* footer */
 footer {
@@ -463,6 +469,66 @@ footer ul {
         top: 0;
         left: 0;
         z-index: 9;
+    }
+
+    /* frequently asked questions */
+    #faq {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #faq .container {
+        grid-template-columns: 1fr;
+        padding-left: var(--lg);
+        padding-right: var(--lg);
+    }
+
+    #faq .questions {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    #faq p {
+        font-size: var(--font-size__100);
+    }
+
+    /* call to action */
+    #call-to-action {
+        padding: 0;
+    }
+    #call-to-action .cta-card {
+        grid-template-columns: 1fr;
+        align-items: center;
+        border-radius: 0%;
+
+        padding: 0;
+    }
+    
+    #call-to-action .container {
+        padding: var(--xxxl) var(--lg);
+    }
+    
+    #call-to-action .gradient {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        background: linear-gradient(to top, #ededed00 30%, #ededed 100%);
+    
+    }
+    
+    #call-to-action .picture {
+        width: 100%;
+        height: 15rem;
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    #call-to-action img {
+        border-radius: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
     /* footer */

@@ -160,16 +160,48 @@ button:focus {
 .submit-btn {
     width: 100%;
     padding: var(--md);
-    font-weight: bold;
     font-size: var(--font-size__100);
     background-color: var(--oceanBreeze);
     border-radius: var(--lg);
     color: var(--desertStorm);
     border: none;
-    font-size: var(--font-size__100);
 }
 
 @media (width >=768px) {
+    #contact {
+        padding: var(--xl) var(--xl);
+        padding-bottom: var(--xxxl);
+    }
+    #contact .contact-information {
+        padding: 0;
+    }
+
+    #contact .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact .map {
+        padding-top: var(--md);
+        height: 30rem;
+        order: 1;
+    }
+
+    #contact .map img {
+        border-radius: var(--md);
+    }
+
+    /* contact-form */
+    #contact-form {
+        padding: 0% var(--xl);
+        padding-bottom: var(--xxxl);
+    }
+
+    #contact-form .container {
+        padding: var(--xl);
+        border-radius: var(--lg);
+    }
+
     /* #contact {
         padding: var(--xxxl) var(--xl);
     }

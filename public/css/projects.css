@@ -33,27 +33,22 @@ img {
 }
 
 @media (width >=768px) {
-    /* #projects-title {
-        padding: var(--xxxl) var(--xl);
+    /* projects-title */
+    #projects-title {
+        padding: 0 var(--xl);
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        padding: 0;
+    #projects-title .container{
+        padding-left: 0%;
+        padding-right: 0%;
     }
-
-    #projects-title p {
-        font-size: var(--font-size__200);
-    }
-
-
+    /* photos grid */
     #photos-grid {
-        padding: var(--xxxl) var(--xl);
+        padding: 0 var(--xl);
     }
-
+    
     #photos-grid .container {
-        padding: 0;
-    } */
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 }

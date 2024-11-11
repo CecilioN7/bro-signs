@@ -1,3 +1,8 @@
+img {
+    height: 100%;
+    width: 100%;
+}
+
 /* about banner */
 #about-banner .container{
     display: flex;
@@ -54,7 +59,8 @@
 }
 
 #mission .mission-description {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--md);
 }
 
@@ -121,7 +127,8 @@
 }
 
 #vision .description {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--md);
 }
 
@@ -153,10 +160,60 @@
 #vision h2 {
     font-size: var(--font-size__200);
 }
-#vision p {
-    font-size: var(--font-size__100);
-}
 
 @media (width >=768px) {
+    #about-banner {
+        padding: 0% var(--xl);
+    }
 
+    #about-banner .container {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    #about-banner .video-subheading {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* mission */
+    #mission {
+        padding: 0% var(--xl);
+    }
+    #mission .container {
+        padding-left: 0%;
+        padding-right: 0%;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--xl);
+    }
+
+    #mission img {
+        height: 30rem;
+    }
+    
+    /* story */
+    #story {
+        padding: 0% var(--xl);
+    }
+    
+    #story .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    #story .story-description {
+        grid-column: 1 / -1;
+    }
+
+    /* vision */
+    #vision {
+        padding: 0% var(--xl);
+    }
+
+    #vision .container {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    
 }

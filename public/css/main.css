@@ -115,7 +115,6 @@ video {
 
 #services p {
     color: var(--cloudGrey);
-    font-size: var(--font-size__100);
 }
 
 /* hook */
@@ -150,7 +149,8 @@ video {
     width: 100%;
     height: auto;
     z-index: 1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--md);
 }
 
@@ -172,7 +172,6 @@ video {
 
 #hook p {
     color: var(--desertStorm);
-    font-size: var(--font-size__100);
 }
 
 /* benefits */
@@ -190,7 +189,8 @@ video {
 }
 
 #benefits .text {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--md);
 }
 
@@ -208,13 +208,11 @@ video {
 
 #benefits p {
     color: var(--ironOre);
-    font-size: var(--font-size__100);
 }
 
 /* reviews */
 #reviews {
     background-color: var(--foggyMist);
-
 }
 
 #reviews .container {
@@ -239,7 +237,6 @@ video {
     display: flex;
     flex-direction: column;
     gap: var(--md);
-
 
     border-radius: var(--lg);
     box-shadow: 0rem 0rem 3rem 0rem rgba(0, 0, 0, 0.217);
@@ -273,14 +270,11 @@ video {
 #reviews p {
     font-size: var(--font-size__100);
     color: var(--midnightAsh);
-    font-weight: 600;
     font-style: italic;
 }
 
 #reviews .profile-name p {
-    font-size: var(--font-size__100);
     color: var(--cloudGrey);
-    font-weight: 600;
     font-style: normal;
 }
 
@@ -365,7 +359,8 @@ video {
 
 @media (width >=768px) {
     #hero {
-        padding: 0 var(--xl)
+        padding-left: var(--xl);
+        padding-right: var(--xl);
     }
 
     #hero .container {
@@ -389,8 +384,14 @@ video {
     }
 
     /* services */
+    #services {
+        padding-left: var(--xl);
+        padding-right: var(--xl);
+    }
+
     #services .services-container {
         flex-direction: row;
+        padding: var(--xl);
     }
 
     #services .icon-box {
@@ -406,6 +407,15 @@ video {
     }
 
     /* hook */
+    #hook {
+        padding-left: var(--xl);
+        padding-right: var(--xl);
+    }
+
+    #hook .glass-container {
+        padding: var(--xl);
+    }
+
     #hook .video-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -415,144 +425,71 @@ video {
         grid-column: span 2;
     }
 
-
-    /*
-    .logo img {
-        max-height: 2rem;
-        width: auto;
-    }
-
-    #services {
-        padding: var(--desktopPadding)
-    }
-
-    #services .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .icon-box {
-        height: 10rem;
-        width: 10rem;
-        padding: 2rem;
-        border-radius: 1.5rem;
-    }
-
-    #services .card {
-        max-width: 12rem;
-        display: flex;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    #services h1 {
-        white-space: normal;
-        font-size: var(--font-size__400);
-    }
-
-    #services h2 {
-        font-size: var(--font-size__300);
-    }
-
-
-    #hook {
-        background-image: url(../images/hook-background-desktop.png);
-        padding: 3rem 2rem;
-    }
-
-    #hook .container {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .glass-container {
-        width: 100%;
-        border-top: 2px solid rgba(255, 255, 255, 0.321);
-        border-left: 2px solid rgba(255, 255, 255, 0.236);
-        border-bottom: 2px solid rgba(146, 247, 254, 0.323);
-        border-right: 2px solid rgba(194, 251, 255, 0.323);
-
-        display: flex;
-        flex-direction: column;
-
-        padding: var(--xxl) var(--xxl);
-    }
-
-    .video-container {
-        max-width: 18rem;
-    }
-
-    #hook video {
-        object-fit: contain;
-    }
-
-
+    /* benefits */
     #benefits {
-        padding: var(--desktopPadding);
+        padding: 0 var(--xl);
     }
 
     #benefits .container {
-        padding: 0rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    #benefits .service-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--xl);
-    }
-
+    #benefits .service-card,
     #benefits .service-card-reversed {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--xl);
-        grid-template-areas: "text image";
     }
 
-    .service-card-reversed .text {
-        grid-area: text;
+    #benefits .service-card-reversed img {
+        order: 1; /* Reverse order for image */
+    }
+    
+    #benefits .service-card-reversed .text {
+        order: -1; /* Reverse order for text */
     }
 
-    .service-card-reversed picture {
-        grid-area: image;
-    }
-
-    #benefits img {
-        width: 1fr;
-    }
-
-
+    /* reviews */
     #reviews {
-        padding: 3rem 2rem;
+        padding: 0 var(--xl);
     }
-
     #reviews .container {
-        grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+        padding-left: 0;
+        padding-right: 0;
     }
-
-
+    
+    /* locations */
     #locations {
-        padding: 3rem 2rem;
+        padding: 0 var(--xl);
     }
-
+    
     #locations .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .desktop {
-        display: block;
+    #locations .location-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: var(--md);
     }
 
-    #locations .container> :first-child {
-        grid-column: span 4;
-    }
-
-    #locations .container> :nth-child(5) {
+    #locations .location-1 {
         grid-column: span 2;
     }
+    #locations .location-2 {
+        grid-column: span 1;
+    }
+    #locations .location-3 {
+        grid-column: span 1;
+    }
 
-    .location-card {
-        color: transparent;
-    } */
+    #locations .location-card {
+        height: 30rem;
+        padding: var(--xl);
+    }
+
+    #locations h2{
+        font-size: var(--font-size__400);
+    }
+
 }
