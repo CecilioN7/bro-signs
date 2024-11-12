@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet" />
-    
+
     <!-- Favicon -->
     <!--Use https://realfavicongenerator.net/ to generate and download your favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
@@ -136,10 +136,11 @@
             </div>
         </section>
 
-        <section id="contact-form">
+        <!-- First Contact Form -->
+        <section id="contact-form" class="form-section">
             <div class="container">
                 <h1>Contact Form</h1>
-                <form class="form-items">
+                <form class="form-items" id="contact-form-1">
                     <div class="form-item">
                         <input type="text" id="name" name="name" placeholder="First and Last Name" required>
                         <label for="name">First and Last Name</label>
@@ -163,6 +164,34 @@
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
+        </section>
+
+        <section id="estimate-form" class="form-section">
+            <div class="container">
+                <h1>Estimate Request</h1>
+                <form class="form-items" id="contact-form-2">
+                    <div class="form-item">
+                        <input type="text" id="name_2" name="name" placeholder="First and Last Name" required>
+                        <label for="name_2">First and Last Name</label>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="email" id="email_2" name="email" placeholder="Email" required>
+                        <label for="email_2">Email</label>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="text" id="address_2" name="address" placeholder="Address">
+                        <label for="address_2">Address</label>
+                    </div>
+
+                    <div class="form-item">
+                        <textarea name="message_2" id="message_2" placeholder="Message" required></textarea>
+                        <label for="message_2">Message</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </section>
         <!-- <section class="contact-form">

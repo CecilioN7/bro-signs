@@ -33,66 +33,85 @@ document.querySelectorAll('.faq-container').forEach(item => {
 });
 
 // Email
-const contactForm = document.querySelector('.form-items');
+// const contactForm = document.querySelector('.form-items');
 
-let name = document.getElementById('name')
-let email = document.getElementById('email')
-let address = document.getElementById('address')
-let message = document.getElementById('message')
+// let name = document.getElementById('name')
+// let email = document.getElementById('email')
+// let address = document.getElementById('address')
+// let message = document.getElementById('message')
 
-contactForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
+// contactForm.addEventListener('submit', (e)=>{
+//     e.preventDefault();
 
-    let formData = {
-        name: name.value,
-        email: email.value,
-        address: address.value,
-        message: message.value
-    }
+//     let formData = {
+//         name: name.value,
+//         email: email.value,
+//         address: address.value,
+//         message: message.value
+//     }
 
-    // could use fetch API 3 lines
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/');
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function() {
-        console.log(xhr.responseText);
-        if (xhr.responseText == 'success'){
-            alert('Email sent');
-            name.value = '';
-            email.value = '';
-            address.value = '';
-            message.value = '';
-        } else {
-            alert('Something went wrong!')
-        }
-    }
+//     // could use fetch API 3 lines
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('POST', '/');
+//     xhr.setRequestHeader('content-type', 'application/json');
+//     xhr.onload = function() {
+//         console.log(xhr.responseText);
+//         if (xhr.responseText == 'success'){
+//             alert('Email sent');
+//             name.value = '';
+//             email.value = '';
+//             address.value = '';
+//             message.value = '';
+//         } else {
+//             alert('Something went wrong!')
+//         }
+//     }
 
-    //send method to the backend
-    xhr.send(JSON.stringify(formData))
+//     //send method to the backend
+//     xhr.send(JSON.stringify(formData))
 
-})
+// })
 
+function handleFormSubmit(formId, nameId, emailId, addressId, messageId, formType) {
+    const form = document.getElementById(formId);
+    let name = document.getElementById(nameId);
+    let email = document.getElementById(emailId);
+    let address = document.getElementById(addressId);
+    let message = document.getElementById(messageId);
 
-// change video source
-function updateVideoSource() {
-    const video = document.getElementById('responsive-video');
-    const screenWidth = window.innerWidth;
-    let newSource;
-  
-    if (screenWidth >= 768) {
-      newSource = '/video/about.mp4';
-    } else {
-      newSource = '/video/about.mp4';
-    }
-  
-    const currentSource = video.querySelector('source').getAttribute('src');
-    if (newSource !== currentSource) {
-      video.querySelector('source').setAttribute('src', newSource);
-      video.load(); // Reload the video with the new source
-    }
-  }
-  
-  // Run the function on page load and on resize
-  updateVideoSource();
-  window.addEventListener('resize', updateVideoSource);
-  
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let formData = {
+            formType: formType,
+            name: name.value,
+            email: email.value,
+            address: address.value,
+            message: message.value
+        };
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/');
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.onload = function () {
+            console.log(xhr.responseText);
+            if (xhr.responseText == 'success') {
+                alert('Email sent');
+                name.value = '';
+                email.value = '';
+                address.value = '';
+                message.value = '';
+            } else {
+                alert('Something went wrong!');
+            }
+        };
+
+        xhr.send(JSON.stringify(formData));
+    });
+}
+
+// Handle the first form
+handleFormSubmit('contact-form-1', 'name', 'email', 'address', 'message', 'contactForm1');
+
+// Handle the second form
+handleFormSubmit('contact-form-2', 'name_2', 'email_2', 'address_2', 'message_2', 'contactForm2');

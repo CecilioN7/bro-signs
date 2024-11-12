@@ -71,7 +71,7 @@
 }
 
 /* contact form */
-#contact-form  .container {
+.form-section  .container {
     background-color: var(--foggyMist);
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@
     padding: var(--xxxl) var(--lg);
 }
 
-#contact-form  h1 {
+.form-section  h1 {
     font-size: var(--font-size__500);
     color: var(--midnightAsh);
 }
@@ -93,13 +93,13 @@
     position: relative;
 }
 
-#contact-form  label {
+.form-section  label {
     font-size: var(--font-size__050);
     color: var(--cloudGrey);
 }
 
-#contact-form  input,
-#contact-form  textarea{
+.form-section  input,
+.form-section  textarea{
     width: 100%;
     padding: var(--md);
     border-radius: var(--md);
@@ -109,12 +109,12 @@
     transition: 0.15s all ease;
 }  
 
-#contact-form  input::placeholder,
-#contact-form  textarea::placeholder{
+.form-section  input::placeholder,
+.form-section  textarea::placeholder{
     color: transparent;
 }
 
-#contact-form  label {
+.form-section  label {
     position: absolute;
     top: var(--md);
     left: var(--md);
@@ -123,10 +123,10 @@
     transition: 0.15s all ease;
 }
 
-#contact-form  input:focus ~ label,
-#contact-form  textarea:focus ~ label,
-#contact-form  input:not(:placeholder-shown) ~ label,
-#contact-form  textarea:not(:placeholder-shown) ~ label {
+.form-section  input:focus ~ label,
+.form-section  textarea:focus ~ label,
+.form-section  input:not(:placeholder-shown) ~ label,
+.form-section  textarea:not(:placeholder-shown) ~ label {
     transform: translate(0px, -28px);
     background-color: #fdfdf7;
     padding: 1px 4px;
@@ -152,7 +152,7 @@ button:focus {
     border-color: transparent;
 }
 
-#contact-form  textarea {
+.form-section  textarea {
     resize: vertical;
     height: 18rem;
 }
@@ -192,12 +192,12 @@ button:focus {
     }
 
     /* contact-form */
-    #contact-form {
+    .form-section {
         padding: 0% var(--xl);
         padding-bottom: var(--xxxl);
     }
 
-    #contact-form .container {
+    .form-section .container {
         padding: var(--xl);
         border-radius: var(--lg);
     }
@@ -227,11 +227,11 @@ button:focus {
         font-size: var(--font-size__600);
     }
 
-    #contact-form  {
+    .form-section  {
         padding: var(--xxxl) var(--xl);
     }
 
-    #contact-form  .container {
+    .form-section  .container {
         border-radius: var(--md);
         padding: var(--xl) var(--xl);
     } */
