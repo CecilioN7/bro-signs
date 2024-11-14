@@ -71,19 +71,19 @@ document.querySelectorAll('.faq-container').forEach(item => {
 //     xhr.send(JSON.stringify(formData))
 
 // })
-
-function handleFormSubmit(formId, nameId, emailId, addressId, messageId, formType) {
-    const form = document.getElementById(formId);
-    let name = document.getElementById(nameId);
-    let email = document.getElementById(emailId);
-    let address = document.getElementById(addressId);
-    let message = document.getElementById(messageId);
+// Function to handle Contact Form submission
+function handleContactFormSubmit() {
+    const form = document.getElementById('contact-form-1');
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let address = document.getElementById('address');
+    let message = document.getElementById('message');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let formData = {
-            formType: formType,
+            formType: 'contactForm1',
             name: name.value,
             email: email.value,
             address: address.value,
@@ -94,8 +94,7 @@ function handleFormSubmit(formId, nameId, emailId, addressId, messageId, formTyp
         xhr.open('POST', '/');
         xhr.setRequestHeader('content-type', 'application/json');
         xhr.onload = function () {
-            console.log(xhr.responseText);
-            if (xhr.responseText == 'success') {
+            if (xhr.responseText === 'success') {
                 alert('Email sent');
                 name.value = '';
                 email.value = '';
@@ -110,8 +109,58 @@ function handleFormSubmit(formId, nameId, emailId, addressId, messageId, formTyp
     });
 }
 
-// Handle the first form
-handleFormSubmit('contact-form-1', 'name', 'email', 'address', 'message', 'contactForm1');
+// Function to handle Estimate Request Form submission
+function handleEstimateFormSubmit() {
+    const form = document.getElementById('contact-form-2');
+    let name = document.getElementById('name_2');
+    let email = document.getElementById('email_2');
+    let address = document.getElementById('address_2');
+    let projectType = document.getElementById('project_type');
+    let dateAvailable = document.getElementById('date_available');
+    let budget = document.getElementById('budget');
+    let message = document.getElementById('message_2');
+    let uploadImages = document.getElementById('upload_images');
 
-// Handle the second form
-handleFormSubmit('contact-form-2', 'name_2', 'email_2', 'address_2', 'message_2', 'contactForm2');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(); // Use FormData to handle file uploads
+        formData.append('formType', 'contactForm2');
+        formData.append('name', name.value);
+        formData.append('email', email.value);
+        formData.append('address', address.value);
+        formData.append('project_type', projectType.value);
+        formData.append('date_available', dateAvailable.value);
+        formData.append('budget', budget.value);
+        formData.append('message', message.value);
+
+        // Append images to FormData
+        Array.from(uploadImages.files).forEach(file => {
+            formData.append('upload_images', file);
+        });
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/');
+        xhr.onload = function () {
+            if (xhr.responseText === 'success') {
+                alert('Email sent');
+                name.value = '';
+                email.value = '';
+                address.value = '';
+                projectType.value = '';
+                dateAvailable.value = '';
+                budget.value = '';
+                message.value = '';
+                uploadImages.value = '';
+            } else {
+                alert('Something went wrong!');
+            }
+        };
+
+        xhr.send(formData); // Send FormData object
+    });
+}
+
+// Call the functions for each form
+handleContactFormSubmit();
+handleEstimateFormSubmit();
