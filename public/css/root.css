@@ -324,9 +324,9 @@ nav a:hover {
 }
 
 #call-to-action img {
-    border-radius: var(--md);
-    height: 30rem;
-    object-fit: cover;
+  aspect-ratio: 138 / 100;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -500,36 +500,32 @@ footer ul {
         grid-template-columns: 1fr;
         align-items: center;
         border-radius: 0%;
-
-        padding: 0;
+        padding: 0%;
     }
     
     #call-to-action .container {
         padding: var(--xxxl) var(--lg);
+        padding-bottom: 0%;
     }
     
-    #call-to-action .gradient {
+    /* #call-to-action .gradient {
         height: 100%;
         width: 100%;
         background-color: black;
         position: absolute;
         background: linear-gradient(to top, #ededed00 30%, #ededed 100%);
     
-    }
+    } */
     
     #call-to-action .picture {
-        width: 100%;
-        height: 15rem;
-        position: relative;
-        margin: 0 auto;
+        padding: 0% var(--xxs);
+        padding-bottom: var(--xxxl);
     }
     
-    #call-to-action img {
-        border-radius: 0;
-        object-fit: cover;
+    /* #call-to-action img {
         width: 100%;
         height: 100%;
-    }
+    } */
 
     /* footer */
     footer {
