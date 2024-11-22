@@ -1,4 +1,9 @@
 /* contact information */
+p,
+a {
+    font-size: var(--font-size__100);
+}
+
 #contact {
     display: flex;
     flex-direction: column;
@@ -168,6 +173,10 @@ button:focus {
 }
 
 @media (width >=768px) {
+    p,
+    a {
+        font-size: var(--font-size__200);
+    }
     #contact {
         padding: var(--xl) var(--xl);
         padding-bottom: var(--xxxl);
