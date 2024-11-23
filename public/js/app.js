@@ -164,3 +164,44 @@ function handleEstimateFormSubmit() {
 // Call the functions for each form
 handleContactFormSubmit();
 handleEstimateFormSubmit();
+
+// Function called by the YouTube API when it's ready
+function onYouTubeIframeAPIReady() {
+    // Detect screen size and choose video
+    const isMobile = window.innerWidth <= 768; // Define mobile screen width threshold
+    const videoIdMobile = '9wHJpJfVZEg';  // Replace with the mobile video ID
+    const videoIdDesktop = 'r4lL0Jet63I'; // Replace with the desktop video ID
+
+    // Set the video ID based on the device
+    const videoId = isMobile ? videoIdMobile : videoIdDesktop;
+
+    // Initialize YouTube Player
+    new YT.Player('player', {
+        videoId: videoId, // Dynamic video ID
+        playerVars: {
+            autoplay: 1,         // Do not autoplay
+            mute: 1,             // Start muted
+            controls: 0,         // Hide all controls
+            modestbranding: 1,   // Minimize YouTube branding
+            rel: 0,              // Disable related videos
+            fs: 0,               // Disable fullscreen button
+            showinfo: 0,         // Hide video title and uploader
+            iv_load_policy: 3,   // Hide annotations
+            loop: 1,             // Enable looping
+            playlist: videoId,   // Required for looping
+            disablekb: 1,        // Disable keyboard controls
+            playsinline: 1,      // Play inline on mobile
+            hl: 'en',            // Set language to English
+            color: 'white'       // Set progress bar to white
+        },
+        events: {
+            onReady: function (event) {
+                event.target.mute(); // Mute the video
+            }
+        }
+    });
+}
+
+
+
+

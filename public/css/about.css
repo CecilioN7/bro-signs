@@ -20,10 +20,21 @@ img {
     gap: var(--md);
 }
 
-#about-banner video {
-    height: 30rem;
-    object-fit: cover;
+#about-banner .video-frame {
     border-radius: var(--md);
+    width: 100%; /* Full width of the container */
+    height: 30rem; /* Fixed height */
+    overflow: hidden; /* Ensures the cropped content is hidden */
+    position: relative;
+}
+
+#about-banner iframe {
+    position: absolute; /* Allows positioning inside the container */
+    top: 0;
+    left: 50%; /* Start positioning from the center of the container */
+    transform: translateX(-50%); /* Shift the iframe left by half its width to center it */
+    width: 75rem; /* Fixed width for the video */
+    height: 100%;
 }
 
 #about-banner .video-subheading {
