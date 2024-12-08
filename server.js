@@ -86,7 +86,7 @@ app.post('/', upload.array('upload_images'), (req, res) => {
         service: 'gmail',
         auth: {
             user: 'navarro.cecilio16@gmail.com',
-            pass: 'uewx ttci bsfa sdpq'
+            pass: 'ocva qiab czlj nhkl'
         }
     });
 
