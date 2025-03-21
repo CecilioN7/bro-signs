@@ -110,8 +110,9 @@ button {
 }
 
 .button-1 {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     width: 100%;
     background-color: var(--oceanBreeze);
@@ -133,9 +134,9 @@ button {
 }
 
 .button-2 {
-    display: block;
-    text-align: center;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: transparent;
     color: var(--desertStorm);

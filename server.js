@@ -63,7 +63,7 @@ const multer = require('multer');
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = process.env.PORT || 5004;
+const PORT = process.env.PORT || 3001;
 
 // Set up multer for file uploads
 const upload = multer({ dest: 'uploads/' }); // Change 'uploads/' to your desired directory
